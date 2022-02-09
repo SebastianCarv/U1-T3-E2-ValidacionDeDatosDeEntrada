@@ -71,16 +71,16 @@
                                     <p><br></p>
                                     <label for="quantity" class="form-label">Cantidad de huespedes</label>
                                     <div class="ui fluid icon input mb-3">
-                                        <input type="number" required id="quantity" placeholder="10"
+                                        <input type="number" required id="quantity" placeholder="10" min="1" max="10"
                                             class="form-control">
                                         <i class="users icon" style="color: blue;"></i>
                                     </div>
 
-                                    <label for="coments" class="form-label">Comentarios</label>
                                     <div class="form-group mb-3">
-                                        <textarea class="form-control" id="coments"
-                                            placeholder="Introduce tus comentarios..." rows="5"></textarea>
-                                    </div>
+                                        <label for="contador">Comentarios</label>
+                                        <textarea  class="form-control" name="contador" id="contador" minlength="1" maxlength="40" onpaste="contarcaracteres();" onkeyup="contarcaracteres();"></textarea>
+                                        <div id="res">0 caractere/s</div>
+                                </div>
 
                                     <label for="cardNumber" class="form-label">Numero de tarjeta</label>
                                     <div class="ui fluid icon input mb-3">

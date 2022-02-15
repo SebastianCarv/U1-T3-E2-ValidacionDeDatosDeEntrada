@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/Semantic-UI-CSS-master/semantic.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Sección de reservaciones</h1>
+                <div class="ui fluid card">
+                    <div class="content">
+                      <div class="header">Reservación</div>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5>Datos del usuario</h5>
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="text"  id="name" class="form-control" placeholder="John" >
+                                        <i class="user icon mb-3" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="nameSpan"></span></p>
+                                        
+
+                                    <label for="surname" class="form-label">Apellido</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="text"  id="surname" class="form-control" placeholder="Smith">
+                                        <i class="user icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="surnameSpan"></span></p>
+
+                                    <label for="email" class="form-label">Correo</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="email"  id="email" class="form-control" placeholder="ejemplo@gmail.com">
+                                        <i class="mail icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="emailSpan"></span></p>
+
+                                    <label for="gender" class="form-label">Sexo</label>
+                                    <select id="gender" class="ui fluid dropdown">
+                                        <option value="">Seleccionar...</option>
+                                        <option value="h">Hombre</option>
+                                        <option value="m">Mujer</option>
+                                    </select>
+                                    <p><span id="genderSpan"></span></p>
+
+                                    <h5>Datos de la reservación</h5>
+                                    <label for="checkin" class="form-label">Día de llegada</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="date"  id="checkin" class="form-control" >
+                                        <i class="calendar icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="checkinSpan"></span></p>
+
+                                    <label for="checkout" class="form-label">Día de salida</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="date"  id="checkout" class="form-control" >
+                                        <i class="calendar icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="checkoutSpan"></span></p>
+                                </div>
+                                <div class="col-6">
+                                    <p></p>
+                                    <p><br></p>
+                                    <label for="quantity" class="form-label">Cantidad de huespedes</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="number" id="quantity" placeholder="10" maxlength="2" class="form-control" >
+                                        <i class="users icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="quantitySpan"></span></p>
+
+                                    <label for="coments" class="form-label">Comentarios</label>
+                                    <div class="form-group mb-3">
+                                        <textarea class="form-control" id="coments" 
+                                        placeholder="Introduce tus comentarios..."
+                                         rows="5"></textarea>
+                                    </div>
+                                    <p><span id="comentsSpan"></span></p>
+
+                                    <h5>Datos bancarios</h5>
+                                    <label for="cardNumber" class="form-label">Numero de tarjeta</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="number" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" class="form-control" >
+                                        <i class="id card icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="cardNumberSpan"></span></p>
+
+                                    <label for="expiredDate" class="form-label">Fecha de expiración</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="text" id="expiredDate" placeholder="10/28" maxlength="5" class="form-control" >
+                                        <i class="calendar icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="expiredDateSpan"></span></p>
+
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <div class="ui fluid icon input mb-3">
+                                        <input type="number" id="cvv" placeholder="123" maxlength="3" class="form-control" >
+                                        <i class="eye slash icon" style="color: blue;"></i>
+                                    </div>
+                                    <p><span id="cvvSpan"></span></p>
+                                </div>
+                            </div>          
+                          </form>
+                    </div>   
+                    <div class="text-center extra content">
+                        <button id="btnReservar" class="ui blue button">Reservar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="js/Semantic-UI-CSS-master//semantic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
